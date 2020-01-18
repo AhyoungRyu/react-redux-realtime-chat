@@ -13,6 +13,7 @@ import {
 } from "formik-semantic-ui";
 import { Link } from 'react-router-dom';
 import * as Yup from 'yup';
+
 import isEmpty from 'lodash/fp/isEmpty';
 import get from 'lodash/fp/get';
 
@@ -25,29 +26,28 @@ const validationSchema = Yup.object().shape({
     .max(50, 'Too Long!')
     .required('Required'),
   email: Yup.string()
-    .email("Please enter a valid email")
-    .required("Please enter an email"),
+    .email('Please enter a valid email')
+    .required('Please enter an email'),
   password: Yup.string()
     .test(
-      "len",
-      "Use a minimum of 8 characters, include letters and numbers",
+      'len',
+      'Use a minimum of 8 characters, include letters and numbers',
         val => val && (val.length >= 8)
     )
-    .required("Use 8 characters minimum"),
+    .required('Use 8 characters minimum'),
   passwordConfirm: Yup.string()
-    .oneOf([Yup.ref("password"), null], "Passwords don't match")
+    .oneOf([Yup.ref('password'), null], "Passwords don't match")
     .required("Passwords don't match"),
 });
 
 const Register = () => {
   const [formErrors, setFormErrors] = useState({})
   const [usersRef, setUsersRef] = useState(firebase.database().ref('users'))
-  console.log({formErrors})
   return (
   <Grid textAlign="center" verticalAlign="middle" className="app">
     <Grid.Column style={{ maxWidth: 450 }}>
-      <Header as="h2" icon color="brown" textAlign="center">
-        <Icon name="puzzle piece" color="brown" />
+      <Header as="h1" icon textAlign="center" style={{ color: '#452007' }}>
+        <Icon name="talk" style={{ color: '#452007' }} />
         Register for Realtime Chatting
       </Header>
       <Form
@@ -82,11 +82,9 @@ const Register = () => {
                 );
                 formikApi.setSubmitting(false);
               })
-              console.log({createdUser})
             })
             .catch(error => {
-              console.error({error});
-              setFormErrors({ ...formErrors, message: get("message", error)})
+              setFormErrors({ ...formErrors, message: get('message', error)})
               formikApi.setSubmitting(false);
             })
         }}
@@ -135,15 +133,22 @@ const Register = () => {
                   placeholder: 'Confirm Password',
                 }}
               />
-              <Button type="submit" color="brown" fluid size="large">Submit</Button>
+              <Button
+                fluid
+                size="large"
+                type="submit" 
+                style={{ background: '#452007', color: '#eee' }}
+              >
+                Submit
+              </Button>
             </Segment>
         )}}
         />
-      {get("message", formErrors)
+      {get('message', formErrors)
         &&(
           <Message error>
             <h3>Error</h3>
-            {get("message", formErrors)}
+            {get('message', formErrors)}
           </Message>
         ) }
       <Message>Already have an account? Click <Link to="/login">here</Link> to login</Message>

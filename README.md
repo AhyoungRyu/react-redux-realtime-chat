@@ -6,6 +6,8 @@
   3. A user can modify the member list of the chatting room by clicking +👤icon and opening a user invitation modal
   4. In the chatting room, the user can send a text or image message
 
+<image src="./src/images/record.gif" width="750px" />
+
 ## 2. Development
 ### Tech stack:
 + [npm](https://www.npmjs.com/) for package management

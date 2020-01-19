@@ -6,7 +6,7 @@ import get from 'lodash/fp/get';
  * @param {Object} state - The redux state
  * @returns {Object} user
  */
-const getUserState = createSelector(
+export const getUserState = createSelector(
   get('user'),
   identity,
 );

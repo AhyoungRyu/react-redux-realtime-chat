@@ -6,7 +6,7 @@ import get from 'lodash/fp/get';
  * @param {Object} state - The redux state
  * @returns {Object} chatRoom
  */
-const getChatRoomState = createSelector(
+export const getChatRoomState = createSelector(
   get('chatRoom'),
   identity,
 );
@@ -31,7 +31,7 @@ export const getCurrentChatRoomId = createSelector(
 
 /**
  * @param {Object} state - The redux state
- * @returns {String} chatRoom.currentChatRoom.members
+ * @returns {Array} chatRoom.currentChatRoom.members
  */
 export const getCurrentChatRoomMembers = createSelector(
   getCurrentChatRoom,

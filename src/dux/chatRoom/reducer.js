@@ -6,8 +6,8 @@ import {
   UPDATE_CHAT_ROOM_MEMBERS,
  } from './actionTypes';
 
-const initialState = {
-  chatRooms: [],
+export const initialState = {
+  // chatRooms: [],
   currentChatRoom: {},
 };
 

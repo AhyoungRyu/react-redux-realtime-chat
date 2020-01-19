@@ -2,7 +2,7 @@ import set from 'lodash/fp/set';
 
 import userReducers, { initialState } from '../reducer';
 import * as actionTypes from '../actionTypes';
-import { user1 } from '../../__tests__/mock_data';
+import { user1 } from '../../../__mocks__/mock_data';
 
 describe('User Reducers', () => {
   it('should return an initial state', () => {

@@ -27,7 +27,7 @@ const getDropdownOptions = (userName) => [
     ),
   },
 ];
-const UserPanel = ({ currentUser }) => (
+export const UserPanel = ({ currentUser }) => (
   <Grid>
     <Grid.Column>
       <Grid.Row style={{ padding: '1.2rem', margin: 0 }}>

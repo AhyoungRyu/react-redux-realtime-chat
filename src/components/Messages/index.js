@@ -39,17 +39,15 @@ const MessageListPlaceholder = ({ isHeader }) => (
 
 const displayMessageContent = ({ messages, loading }) => {
   if (loading) {
-    return (
-      <MessageListPlaceholder />
-    )
+    return <MessageListPlaceholder />
   }
   if (messages.length > 0) {
     return map(message => <Message key={message.timestamp} message={message} />, messages)
   }
-  return <div>Start first conversation here!</div>
+  return <div>Start first conversation from here!</div>
 }
 
-const Messages = ({ currentChatRoomId, setChatRoomModalOpen }) => {
+export const Messages = ({ currentChatRoomId, setChatRoomModalOpen }) => {
   if (!currentChatRoomId) {
     return (
       <Fragment>
@@ -67,8 +65,9 @@ const Messages = ({ currentChatRoomId, setChatRoomModalOpen }) => {
   }
   const messagesRef = firebase.database().ref('messages').child(currentChatRoomId);
   const [messages, loading] = useListVals(messagesRef);
-  const messagesEndRef = useRef(null)
+  const messagesEndRef = useRef(null);
   useEffect(() => {
+      // Scroll to the bottom to display the most recent message
       messagesEndRef.current.scrollIntoView({ 
         behavior: "smooth",
       })
@@ -95,7 +94,9 @@ Messages.propTypes = {
 };
 
 Messages.defaultProps = {
+  // From connect
   currentChatRoomId: '',
+  // From parent
   setChatRoomModalOpen: noop,
 }
 

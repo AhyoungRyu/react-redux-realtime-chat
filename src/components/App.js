@@ -9,25 +9,25 @@ const App = () => {
   const [chatRoomModalOpen, setChatRoomModalOpen] = useState(false);
   return (
     <Fragment>
-        <Grid
-          columns="equal"
-          className="app"
+      <Grid
+        columns="equal"
+        className="app"
+      >
+        <SidePanel
+          setChatRoomModalOpen={setChatRoomModalOpen}
+        />
+        <Grid.Column
+          style={{ marginLeft: 280 }}
         >
-          <SidePanel
+          <Messages 
             setChatRoomModalOpen={setChatRoomModalOpen}
           />
-          <Grid.Column
-            style={{ marginLeft: 280 }}
-          >
-            <Messages 
-              setChatRoomModalOpen={setChatRoomModalOpen}
-            />
-          </Grid.Column>
-        </Grid>
-        <NewChatRoomModal
-          modalOpened={chatRoomModalOpen}
-          onCloseModal={() => setChatRoomModalOpen(false)}
-        />
+        </Grid.Column>
+      </Grid>
+      <NewChatRoomModal
+        modalOpened={chatRoomModalOpen}
+        onCloseModal={() => setChatRoomModalOpen(false)}
+      />
     </Fragment>
   );
 }

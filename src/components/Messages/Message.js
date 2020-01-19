@@ -13,7 +13,7 @@ const StyledImage = styled(Image)`
   max-height: 400px;
 `;
 
-const Message  = ({
+export const Message  = ({
   message: { user, timestamp, content, image },
   currentUserId,
  }) => (

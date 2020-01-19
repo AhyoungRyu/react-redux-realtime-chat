@@ -7,7 +7,7 @@ import noop from 'lodash/fp/noop';
 import UserPanel from './UserPanel';
 import ChatRooms from './ChatRooms';
 
-const SidePanel = ({ setChatRoomModalOpen }) => (
+export const SidePanel = ({ setChatRoomModalOpen }) => (
   <Menu
     size="large"
     inverted
@@ -19,7 +19,6 @@ const SidePanel = ({ setChatRoomModalOpen }) => (
     <ChatRooms setChatRoomModalOpen={setChatRoomModalOpen} />
   </Menu>
 );
-
 
 SidePanel.propTypes = {
   // From parent

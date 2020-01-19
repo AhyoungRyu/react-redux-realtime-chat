@@ -11,7 +11,7 @@ const InviteUserIconBtn = styled(Icon)`
   margin-left: 0.5em !important;
   cursor: pointer;
 `;
-const MessageHeader = ({ currentChatRoom }) => {
+export const MessageHeader = ({ currentChatRoom }) => {
   const [inviteUserModalOpened, setInviteUserModalOpened] = useState(false);
   return (
     <Fragment>

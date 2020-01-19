@@ -22,7 +22,7 @@ const getAuthorizedChatRooms = currentUserId => filter(
   ({ members }) => find(member => member === currentUserId, members)
 )
 
-const ChatRooms = ({
+export const ChatRooms = ({
   currentChatRoomId,
   currentUserId,
   setChatRoomModalOpen,
@@ -45,7 +45,8 @@ const ChatRooms = ({
           <strong>
             CHAT ROOMS {' '}
           </strong>
-          ({ authorizedChatRooms.length }) <Icon name="add" onClick={() => setChatRoomModalOpen(true)} />
+          ({ authorizedChatRooms.length }){' '}
+          <Icon data-testid="new-chatroom" name="add" onClick={() => setChatRoomModalOpen(true)} />
         </Menu.Item>
       </Menu.Menu>
       {loading && <Menu.Item>Loading...</Menu.Item>}

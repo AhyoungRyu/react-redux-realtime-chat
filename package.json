@@ -21,6 +21,7 @@
     "redux": "^4.0.0",
     "redux-actions": "^2.6.5",
     "redux-devtools-extension": "^2.13.5",
+    "redux-mock-store": "^1.5.4",
     "reselect": "^4.0.0",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.88.2",
@@ -38,6 +39,7 @@
   "devDependencies": {
     "@babel/preset-env": "^7.8.3",
     "@babel/preset-react": "^7.8.3",
+    "@testing-library/react": "^9.4.0",
     "babel-jest": "^24.9.0",
     "dotenv": "^8.2.0",
     "enzyme": "^3.11.0",
@@ -60,6 +62,9 @@
     ],
     "modulePathIgnorePatterns": [
       "mock_data.js"
-    ]
+    ],
+    "moduleNameMapper": {
+      "\\.(css|less|sass|scss)$": "<rootDir>/src/__mocks__/styleMock.js"
+    }
   }
 }

@@ -7,7 +7,7 @@ import {
   user1,
   user2,
   user3,
- } from '../../__tests__/mock_data';
+ } from '../../../__mocks__/mock_data';
 
 describe('ChatRoom Reducers', () => {
   it('should return an initial state', () => {

@@ -1,7 +1,7 @@
 import get from 'lodash/fp/get';
 
 import * as chatRoomSelectors from '../selectors';
-import { mockState } from '../../__tests__/mock_data';
+import { mockState } from '../../../__mocks__/mock_data';
 
 describe('ChatRoom Selectors', () => {
   it('should handle getChatRoom', () => {
@@ -13,7 +13,7 @@ describe('ChatRoom Selectors', () => {
       .toEqual(get('chatRoom.currentChatRoom', mockState));
   });
   it('should handle getCurrentUserId', () => {
-    expect(userSelectors.getCurrentChatRoomId(mockState))
+    expect(chatRoomSelectors.getCurrentChatRoomId(mockState))
       .toEqual(get('chatRoom.currentChatRoom.id', mockState));
   });
 })

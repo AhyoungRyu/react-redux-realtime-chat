@@ -1,6 +1,6 @@
 import * as chatRoomActions from '../actions';
 import * as chatRoomActionTypes from '../actionTypes';
-import { chatRoom1, user1, user2  } from '../../__tests__/mock_data';
+import { chatRoom1, user1, user2  } from '../../../__mocks__/mock_data';
 
 describe('ChatRoom Actions', () => {
   it('should handle setCurrentChatRoom', () => {

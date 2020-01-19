@@ -1,7 +1,7 @@
 import get from 'lodash/fp/get';
 
 import * as userSelectors from '../selectors';
-import { mockState } from '../../__tests__/mock_data';
+import { mockState } from '../../../__mocks__/mock_data';
 
 describe('User Selectors', () => {
   it('should handle getUserState', () => {

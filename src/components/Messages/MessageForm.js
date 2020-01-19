@@ -14,7 +14,7 @@ import ImageFileUploadModal from '../Modals/ImageFileUpload';
 const StyledSegment = styled(Segment)`
   margin-top: 16px;
 `;
-const MessageForm = ({ currentChatRoomId, currentUser }) => {
+export const MessageForm = ({ currentChatRoomId, currentUser }) => {
   const messagesRef = firebase.database().ref('messages');
   const [modalOpened, setModalOpened] = useState(false);
   return (

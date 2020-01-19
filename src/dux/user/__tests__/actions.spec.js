@@ -1,6 +1,6 @@
 import * as userActions from '../actions';
 import * as userActionTypes from '../actionTypes';
-import { user1  } from '../../__tests__/mock_data';
+import { user1  } from '../../../__mocks__/mock_data';
 
 describe('User Actions', () => {
   it('should handle setUser', () => {

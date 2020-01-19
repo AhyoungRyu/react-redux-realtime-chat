@@ -28,7 +28,7 @@ const getUserOptions = (userList = {}, currentUserId) => Object.entries(userList
   .map(([key, { name }]) => ({ key, text: name, value: key}))
   .filter(user => user.key !== currentUserId)
 
-const ChatRoomModal = ({
+export const ChatRoomModal = ({
   currentUser,
   modalOpened,
   onCloseModal,

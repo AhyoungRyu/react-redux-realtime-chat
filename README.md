@@ -25,7 +25,7 @@
   # After successfull pkg installtion
   $ npm start
 ```
-Now, it will automatically open http://localhost:3000 and show you the login / register page. Or visit the demo site 
+Now, it will automatically open http://localhost:3000 and show you the login / register page. Or visit the demo website https://react-realtime-chatting-app.firebaseapp.com/ for overall functionality test
 
 ### To run unit test:
 ```bash

@@ -31,11 +31,12 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "jest __tests__",
     "eject": "react-scripts eject",
     "deploy-production": "mv .env staging.env && mv production.env .env && npm run build && firebase use production && firebase deploy && firebase use default && mv .env production.env && mv staging.env .env"
   },
   "devDependencies": {
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "jest": "^24.9.0"
   }
 }

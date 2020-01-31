@@ -30,7 +30,7 @@
 Now, it will automatically open http://localhost:3000 and show you the login / register page. 
 Or visit the demo website https://react-realtime-chatting-app.firebaseapp.com/ for overall functionality test.
 
-You might encounter a firebase related errors on initial loading. Please download `example.env` file from [here](https://firebasestorage.googleapis.com/v0/b/react-realtime-chatting-app.appspot.com/o/etc%2Fexample.env?alt=media&token=bab91b16-5c06-4884-882f-8cf1e23fcb44) and rename it to `.env` and then put it under `src/` folder. Then the error should be gone.
+You might encounter a firebase related errors on initial loading. You need to modify `example.env` file first and and rename it to `.env` and then put it under `src/` folder. Then the error should be gone.
 
 ### To run unit test:
 ```bash
